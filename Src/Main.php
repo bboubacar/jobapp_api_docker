@@ -41,6 +41,8 @@ class Main
 
                 // On recupère le 2ème paramèttre d'URL
                 $action = (isset($params[0]) ? array_shift($params) : 'index');
+                print_r($controller);
+                print_r($action);
                 if (method_exists($controller, $action)) {
                     // S'il reste des paramètres on les passe à la méthode
                     isset($params[0]) ? $controller->$action($params) : $controller->$action();
