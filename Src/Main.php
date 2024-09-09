@@ -29,7 +29,6 @@ class Main
 
         $params = explode('/', $_GET['p']);
         // On verifie qu'on a au moins un paramètre
-        print_r($params);
         if ($params[0] !== "") {
             // Tout d'abor on verifie l'existance du controller
             if (in_array($params[0], CONTROLLERS)) {
@@ -42,8 +41,6 @@ class Main
 
                 // On recupère le 2ème paramèttre d'URL
                 $action = (isset($params[0]) ? array_shift($params) : 'index');
-                print_r($controller);
-                print_r($action);
                 if (method_exists($controller, $action)) {
                     // S'il reste des paramètres on les passe à la méthode
                     isset($params[0]) ? $controller->$action($params) : $controller->$action();
