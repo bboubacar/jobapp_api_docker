@@ -18,7 +18,7 @@ class Db extends PDO
     private function __construct()
     {
         // DSN de connexion
-        $_dsn = SGBDR . ':dbname=' . DBNAME . ';host=' . DBHOST;
+        $_dsn = SGBDR . ':dbname=' . DBNAME . ';host=' . DBHOST . ';port=16262';
 
         // On appelle le constructeur de la classe PDO
         try {
