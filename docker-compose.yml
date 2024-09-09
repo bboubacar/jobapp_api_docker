@@ -7,11 +7,3 @@ services:
             - "8080:80"
         volumes:
             - ./emplois:/var/www/html/
-        networks:
-            - api-network
-volumes:
-    dbdata:
-
-networks:
-    api-network:
-        driver: bridge
