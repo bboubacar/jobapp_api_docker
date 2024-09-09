@@ -4,6 +4,9 @@ FROM php:8.2-apache
 # Activer mod_rewrite pour que RewriteEngine fonctionne dans les fichiers .htaccess
 RUN a2enmod rewrite
 
+# Activer les extensions PHP nécessaires pour MySQL
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
 # Activez les fichiers .htaccess en modifiant la configuration d'Apache
 RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
