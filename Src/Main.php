@@ -29,6 +29,7 @@ class Main
 
         $params = explode('/', $_GET['p']);
         // On verifie qu'on a au moins un paramètre
+        print_r($params);
         if ($params[0] !== "") {
             // Tout d'abor on verifie l'existance du controller
             if (in_array($params[0], CONTROLLERS)) {
