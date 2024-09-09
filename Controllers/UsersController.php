@@ -91,7 +91,7 @@ class UsersController extends Controller
         $current_role = array_shift($role);
         header('Content-Type: application/json');
         $data = json_decode(file_get_contents("php://input"), true);
-        print_r("data $_POST, role $_SERVER");
+        print_r($_POST);
         $data = $this->validateUser($data, $champs_obligatoires, $current_role);
 
         // On n'ettoie les champs
