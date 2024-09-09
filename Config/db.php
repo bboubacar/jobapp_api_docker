@@ -6,6 +6,7 @@ if ($_SERVER["SERVER_NAME"] !== "localhost") {
     define('DBUSER', $_ENV['DBUSER']);
     define('DBPASS', $_ENV['DBPASS']);
     define('DBNAME', $_ENV['DBNAME']);
+    define('PORT', $_ENV['PORT']);
 
     // Clé pour le token
     define('SECRETE_KEY_C',  $_ENV['SECRETE_KEY_C']);
@@ -17,6 +18,7 @@ if ($_SERVER["SERVER_NAME"] !== "localhost") {
     define('DBUSER', 'bcr');
     define('DBPASS', 'bcr');
     define('DBNAME', 'offres_emploi');
+    define('PORT', '80');
 
     // Clé pour le token
     define('SECRETE_KEY_C',  'ceci est une cle pour les candidats');
