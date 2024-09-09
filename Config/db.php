@@ -1,6 +1,6 @@
 <?php
 // Informations de connexion
-print_r($_ENV);
+
 if ($_SERVER["SERVER_NAME"] !== "localhost") {
     define('SGBDR', $_ENV['SGBDR']);
     define('DBHOST', $_ENV['DBHOST']);
