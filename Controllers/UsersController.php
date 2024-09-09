@@ -90,7 +90,7 @@ class UsersController extends Controller
         $champs_obligatoires = [USERS['email'], USERS['pwrd']];
         $current_role = array_shift($role);
         $data = json_decode(file_get_contents("php://input"), true);
-        print_r("data $data, role $current_role");
+        print_r("data $_POST, role $current_role");
         $data = $this->validateUser($data, $champs_obligatoires, $current_role);
 
         // On n'ettoie les champs
