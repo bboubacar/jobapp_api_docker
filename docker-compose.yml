@@ -1,9 +1,9 @@
 version: "3.8"
 services:
     api:
-        build: ./emplois
+        build: .
         container_name: api_php
         ports:
             - "8080:80"
         volumes:
-            - ./emplois:/var/www/html/
+            - .:/var/www/html/
