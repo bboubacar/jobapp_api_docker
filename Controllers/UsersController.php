@@ -22,7 +22,7 @@ class UsersController extends Controller
      * @param array $champs
      * @return object
      */
-    private function validateUser(object $data, array $champs, string $role = ''): ?object
+    private function validateUser(?object $data, array $champs, string $role = ''): ?object
     {
         if (empty($role) && $role !== USERS['1']  && $role !== USERS['2']) {
             $this->response(CODE['400']['code'], false, CODE['400']['text']);
